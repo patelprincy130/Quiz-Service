@@ -17,14 +17,11 @@ import com.product.models.WrapperQuestion;
 public interface QuizInterface {
 
 	@GetMapping("question/generate")
-	@ResponseBody
 	public ResponseEntity<List<Integer>> generateQuestions(@RequestParam String category, @RequestParam int numOfQues);
 	
 	@PostMapping("question/getQuestionById")
-	@ResponseBody
 	public ResponseEntity<List<WrapperQuestion>> getQuestionsById(@RequestBody List<Integer> ids);
 	
 	@PostMapping("question/getScore")
-	@ResponseBody
 	public ResponseEntity<Integer> getScore(@RequestBody List<Response> responses);
 }

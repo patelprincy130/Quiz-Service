@@ -30,11 +30,11 @@ public class QuizController {
 		return quizService.createQuiz(quizDto.getCategory(), quizDto.getTitle(), quizDto.getNumOfQues());
 	}
 	
-//	@GetMapping("/getQuestions/{id}") //quiz id --> 1,2,3 quiz created
-//	public ResponseEntity<List<WrapperQuestion>> getQuestionsById(@PathVariable int id){
-//		return quizService.getQuestionsById(id);
-//	}
-//	
+	@GetMapping("/getQuestions/{id}") //this is quiz id
+	public ResponseEntity<List<WrapperQuestion>> getQuestionsById(@PathVariable int id){
+		return quizService.getQuestionsById(id);
+	}
+	
 //	@GetMapping("/submit/{id}") //quiz id
 //	public ResponseEntity<Integer> getScore(@PathVariable int id,@RequestBody List<Response> response){
 //		return quizService.getScore(id,response);
