@@ -35,9 +35,9 @@ public class QuizController {
 		return quizService.getQuestionsById(id);
 	}
 	
-//	@GetMapping("/submit/{id}") //quiz id
-//	public ResponseEntity<Integer> getScore(@PathVariable int id,@RequestBody List<Response> response){
-//		return quizService.getScore(id,response);
-//	}
+	@PostMapping("/submit/{id}") //quiz id
+	public ResponseEntity<Integer> getScore(@PathVariable int id,@RequestBody List<Response> response){
+		return quizService.getScore(id,response);
+	}
 	
 }

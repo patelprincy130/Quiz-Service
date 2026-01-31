@@ -49,18 +49,10 @@ public class QuizService {
 	}
 
 
-//	public ResponseEntity<Integer> getScore(int id, List<Response> response) {
-//		int rightAnswers=0;
-//		Quiz quiz=quizRepo.findById(id).get();
-////		List<Question> questions=quiz.getQuestions();
-////		int i=0;
-////		for(Question q:questions) {
-////			if(q.getRightAnswer().equals(response.get(i).getAnswer()))
-////				rightAnswers++;
-////			i++;
-////		}
-//		
-//		return new ResponseEntity<>(rightAnswers,HttpStatus.OK);
-//	}
+	public ResponseEntity<Integer> getScore(int id, List<Response> response) { //id is not in use
+		return quizInterface.getScore(response);
+	}
+	
+	
 }
 
